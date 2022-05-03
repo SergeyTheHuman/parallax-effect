@@ -1,1 +1,161 @@
 @import url('/utils/css/reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+@import url('/utils/css/global.css');
+
+
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	font-size: 16px;
+	color: #fff;
+	background-color: rgb(68, 68, 68);
+	font-family: 'Tapestry', sans-serif;
+}
+
+.wrapper {
+	min-height: 100%;
+}
+
+._container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 50px 20px;
+}
+
+.parallax {
+	min-height: 100vh;
+}
+
+.parallax__body {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.parallax__container {
+	text-transform: uppercase;
+	position: relative;
+	z-index: 2;
+}
+
+
+.parallax__label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-yellow);
+	font-size: 1.5rem;
+	letter-spacing: 0.33rem;
+	margin-bottom: 1.875rem;
+}
+
+.parallax__label::before {
+	content: '';
+	width: 4rem;
+	height: 1px;
+	background-color: var(--color-yellow);
+	margin-right: 2rem;
+}
+
+.parallax__label::after {
+	content: '';
+	width: 4rem;
+	height: 1px;
+	background-color: var(--color-yellow);
+	margin-left: 2rem;
+}
+
+.parallax__title {
+	font-size: 3rem;
+	letter-spacing: .2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.parallax__images {
+	position: absolute;
+	width: 120%;
+	height: 120%;
+	top: -10%;
+	left: -10%;
+	z-index: 1;
+}
+
+.images-parallax {}
+
+.images-parallax__item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.images-parallax__clouds,
+.images-parallax__mountains,
+.images-parallax__human {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.images-parallax__clouds {
+	background: url('/src/images/clouds.jpg') top / cover no-repeat;
+	top: 0;
+}
+
+.images-parallax__mountains {
+	background: url('/src/images/mountains.png') top / cover no-repeat;
+	top: 15%;
+}
+
+.images-parallax__human {
+	background: url('/src/images/human.png') top / cover no-repeat;
+	top: 45%;
+}
+
+.content {
+	position: relative;
+	background: rgb(63, 63, 63);
+	z-index: 2;
+}
+
+.content::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 12.5rem;
+	transform: translate(0, -100%);
+	background: linear-gradient(0deg, rgb(63, 63, 63) 0%, transparent 100%);
+}
+
+.content__container {}
+
+.content__title {
+	font-size: 2.5rem;
+	margin-bottom: 3rem;
+}
+
+.content__text {
+	font-size: 1.5rem;
+	line-height: 1.5;
+}
+
+.content__paragraph {
+	margin-bottom: 2.5rem;
+}
+
+@media (max-aspect-ratio: 3/2) {
+	.images-parallax__human {
+		background-position: 20% top;
+	}
+}
