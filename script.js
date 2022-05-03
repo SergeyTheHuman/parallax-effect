@@ -64,9 +64,8 @@ window.onload = () => {
 		observer.observe($content)
 
 		function setParallaxItemsStyle(scrollTopProcent) {
-			$content.style.cssText = `transform: translate(0%,-${scrollTopProcent / 9}%);`
-			$mountains.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 6}%);`
-			$human.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 3}%);`
+			$mountains.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 4}%);`
+			$human.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 2}%);`
 		}
 	}
 }
