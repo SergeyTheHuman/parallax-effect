@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
 @import url('/utils/css/global.css');
 
-
-
 html,
 body {
 	height: 100%;
@@ -86,8 +84,6 @@ body {
 	z-index: 1;
 }
 
-.images-parallax {}
-
 .images-parallax__item {
 	position: absolute;
 	width: 100%;
@@ -137,8 +133,6 @@ body {
 	transform: translate(0, -100%);
 	background: linear-gradient(0deg, rgb(63, 63, 63) 0%, transparent 100%);
 }
-
-.content__container {}
 
 .content__title {
 	font-size: 2.5rem;
